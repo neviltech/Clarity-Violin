@@ -10,6 +10,7 @@ import Gallery from "./pages/Gallery";
 import Location from "./pages/Location";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
+import ClariceChat from "./components/ClariceChat";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      <ClariceChat />
     </TooltipProvider>
   </QueryClientProvider>
 );
