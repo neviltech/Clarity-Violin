@@ -7,7 +7,7 @@ const Footer = () => (
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
         <Link to="/" className="flex items-center gap-2 text-primary-foreground font-heading text-lg font-semibold">
           <Music className="h-5 w-5" />
-          Violin Academy
+          Clarity Violin
         </Link>
         <div className="flex flex-wrap justify-center gap-6">
           {[
