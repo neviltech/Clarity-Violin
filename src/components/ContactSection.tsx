@@ -74,7 +74,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="font-heading font-semibold text-foreground group-hover:text-primary transition-colors">Call Us</p>
-                <p className="text-sm text-muted-foreground font-body">+1 (234) 567-890</p>
+                <p className="text-sm text-muted-foreground font-body">0118 374701</p>
               </div>
             </a>
           </motion.div>
