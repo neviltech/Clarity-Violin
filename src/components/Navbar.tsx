@@ -21,7 +21,7 @@ const Navbar = () => {
       <div className="container mx-auto flex items-center justify-between h-16 px-4">
         <Link to="/" className="flex items-center gap-2 font-heading text-xl font-semibold text-foreground">
           <Music className="h-6 w-6 text-primary" />
-          Violin Academy
+          Clarity Violin
         </Link>
 
         {/* Desktop */}

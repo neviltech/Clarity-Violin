@@ -51,7 +51,7 @@ const ContactSection = () => {
             </p>
 
             <a
-              href="https://wa.me/1234567890"
+              href="https://wa.me/254118374701"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 bg-card rounded-2xl p-5 shadow-soft border border-border/50 hover:border-primary/30 transition-all group"

@@ -24,7 +24,7 @@ const Footer = () => (
         </div>
       </div>
       <p className="mt-8 text-center text-primary-foreground/40 text-sm font-body">
-        © {new Date().getFullYear()} Violin Academy · Bondo, Siaya, Kenya. All rights reserved.
+        © {new Date().getFullYear()} Clarity Violin · Bondo, Siaya, Kenya. All rights reserved.
       </p>
     </div>
   </footer>

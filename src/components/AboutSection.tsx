@@ -53,7 +53,7 @@ const AboutSection = () => (
       >
         {[
           { icon: Heart, label: "Passion-Driven", desc: "Teaching rooted in genuine love for music" },
-          { icon: Award, label: "15+ Years Experience", desc: "Professional performance & pedagogy" },
+          { icon: Award, label: "6+ Years Playing", desc: "Dedicated violinist since age 12" },
           { icon: Music2, label: "All Levels Welcome", desc: "From first notes to concert stage" },
         ].map((item, i) => (
           <motion.div key={item.label} custom={i + 3} variants={fadeUp} className="flex flex-col items-center gap-3">
