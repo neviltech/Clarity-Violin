@@ -66,7 +66,7 @@ const ContactSection = () => {
             </a>
 
             <a
-              href="tel:+1234567890"
+              href="tel:0118374701"
               className="flex items-center gap-4 bg-card rounded-2xl p-5 shadow-soft border border-border/50 hover:border-primary/30 transition-all group"
             >
               <div className="w-12 h-12 rounded-2xl gradient-purple flex items-center justify-center shadow-soft">
