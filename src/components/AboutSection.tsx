@@ -39,8 +39,8 @@ const AboutSection = () => (
         variants={fadeUp}
         className="mt-6 text-muted-foreground text-lg leading-relaxed font-body"
       >
-        At Violin Academy, we believe music transforms lives. Our experienced instructor brings over 15 years of
-        performance and teaching experience, guiding each student with patience, warmth, and a deep love for the violin.
+        At Clarity Violin, we believe music transforms lives. Founded by Clarice Wachegu, who has been playing since age 12,
+        our academy guides each student with patience, warmth, and a deep love for the violin.
         Whether you're picking up a bow for the first time or refining your repertoire, we create a supportive space
         where you can grow at your own pace.
       </motion.p>
