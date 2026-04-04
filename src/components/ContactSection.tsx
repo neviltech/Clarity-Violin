@@ -51,7 +51,7 @@ const ContactSection = () => {
             </p>
 
             <a
-              href="https://wa.me/1234567890"
+              href="https://wa.me/254118374701"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-4 bg-card rounded-2xl p-5 shadow-soft border border-border/50 hover:border-primary/30 transition-all group"
@@ -66,7 +66,7 @@ const ContactSection = () => {
             </a>
 
             <a
-              href="tel:+1234567890"
+              href="tel:0118374701"
               className="flex items-center gap-4 bg-card rounded-2xl p-5 shadow-soft border border-border/50 hover:border-primary/30 transition-all group"
             >
               <div className="w-12 h-12 rounded-2xl gradient-purple flex items-center justify-center shadow-soft">
@@ -74,7 +74,7 @@ const ContactSection = () => {
               </div>
               <div>
                 <p className="font-heading font-semibold text-foreground group-hover:text-primary transition-colors">Call Us</p>
-                <p className="text-sm text-muted-foreground font-body">+1 (234) 567-890</p>
+                <p className="text-sm text-muted-foreground font-body">0118 374701</p>
               </div>
             </a>
           </motion.div>

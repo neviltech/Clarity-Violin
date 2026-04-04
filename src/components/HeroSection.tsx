@@ -22,7 +22,7 @@ const HeroSection = () => (
         transition={{ duration: 0.8 }}
         className="font-heading text-4xl sm:text-5xl md:text-7xl font-bold text-primary-foreground leading-tight max-w-4xl mx-auto"
       >
-        Violin Academy — Master the Art of Music 🎻
+        Clarity Violin — Master the Art of Music 🎻
       </motion.h1>
 
       <motion.p

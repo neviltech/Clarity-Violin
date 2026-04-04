@@ -7,7 +7,7 @@ const Footer = () => (
       <div className="flex flex-col md:flex-row items-center justify-between gap-6">
         <Link to="/" className="flex items-center gap-2 text-primary-foreground font-heading text-lg font-semibold">
           <Music className="h-5 w-5" />
-          Violin Academy
+          Clarity Violin
         </Link>
         <div className="flex flex-wrap justify-center gap-6">
           {[
@@ -24,7 +24,7 @@ const Footer = () => (
         </div>
       </div>
       <p className="mt-8 text-center text-primary-foreground/40 text-sm font-body">
-        © {new Date().getFullYear()} Violin Academy · Bondo, Siaya, Kenya. All rights reserved.
+        © {new Date().getFullYear()} Clarity Violin · Bondo, Siaya, Kenya. All rights reserved.
       </p>
     </div>
   </footer>

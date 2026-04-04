@@ -28,7 +28,7 @@ const Index = () => (
           transition={{ duration: 0.8 }}
           className="font-heading text-4xl sm:text-5xl md:text-7xl font-bold text-primary-foreground leading-tight max-w-4xl mx-auto"
         >
-          Violin Academy — Learn, Play, Master 🎻
+          Clarity Violin — Learn, Play, Master 🎻
         </motion.h1>
         <motion.p
           initial={{ opacity: 0, y: 20 }}
@@ -66,7 +66,7 @@ const Index = () => (
           Where Passion Meets Patience
         </motion.h2>
         <motion.p initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }} className="mt-6 text-muted-foreground text-lg leading-relaxed font-body">
-          Based in Bondo, Siaya County, Violin Academy offers professional violin education rooted in passion, patience, and a deep love for music. Whether you're picking up a bow for the first time or refining your craft, we create a supportive space for every learner.
+          Based in Bondo, Siaya County, Clarity Violin offers professional violin education rooted in passion, patience, and a deep love for music. Whether you're picking up a bow for the first time or refining your craft, we create a supportive space for every learner.
         </motion.p>
         <motion.div initial={{ opacity: 0 }} whileInView={{ opacity: 1 }} viewport={{ once: true }} transition={{ delay: 0.3 }} className="mt-8">
           <Button asChild variant="outline" className="rounded-full px-8 font-body">

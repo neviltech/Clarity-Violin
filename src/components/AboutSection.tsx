@@ -39,8 +39,8 @@ const AboutSection = () => (
         variants={fadeUp}
         className="mt-6 text-muted-foreground text-lg leading-relaxed font-body"
       >
-        At Violin Academy, we believe music transforms lives. Our experienced instructor brings over 15 years of
-        performance and teaching experience, guiding each student with patience, warmth, and a deep love for the violin.
+        At Clarity Violin, we believe music transforms lives. Founded by Clarice Wachegu, who has been playing since age 12,
+        our academy guides each student with patience, warmth, and a deep love for the violin.
         Whether you're picking up a bow for the first time or refining your repertoire, we create a supportive space
         where you can grow at your own pace.
       </motion.p>
@@ -53,7 +53,7 @@ const AboutSection = () => (
       >
         {[
           { icon: Heart, label: "Passion-Driven", desc: "Teaching rooted in genuine love for music" },
-          { icon: Award, label: "15+ Years Experience", desc: "Professional performance & pedagogy" },
+          { icon: Award, label: "6+ Years Playing", desc: "Dedicated violinist since age 12" },
           { icon: Music2, label: "All Levels Welcome", desc: "From first notes to concert stage" },
         ].map((item, i) => (
           <motion.div key={item.label} custom={i + 3} variants={fadeUp} className="flex flex-col items-center gap-3">
