@@ -11,6 +11,7 @@ import Location from "./pages/Location";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import ClariceChat from "./components/ClariceChat";
+import { ConversationProvider } from "@elevenlabs/react";
 
 const queryClient = new QueryClient();
 
