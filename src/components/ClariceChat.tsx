@@ -50,7 +50,6 @@ const ClariceChat = () => {
       await navigator.mediaDevices.getUserMedia({ audio: true });
       await conversation.startSession({
         agentId: AGENT_ID,
-        connectionType: "webrtc",
       });
     } catch (err) {
       console.error("Failed to start:", err);
