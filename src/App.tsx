@@ -31,7 +31,9 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
-      <ClariceChat />
+      <ConversationProvider>
+        <ClariceChat />
+      </ConversationProvider>
     </TooltipProvider>
   </QueryClientProvider>
 );
