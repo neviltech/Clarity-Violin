@@ -5,6 +5,27 @@ import { useConversation } from "@elevenlabs/react";
 
 const AGENT_ID = "agent_2701knh1mh31e4bs8tmq598s9wrm";
 
+const PulsingRings = ({ color = "bg-primary" }: { color?: string }) => (
+  <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+    {[0, 1, 2].map((i) => (
+      <motion.div
+        key={i}
+        className={`absolute w-24 h-24 rounded-full ${color} opacity-0`}
+        animate={{
+          scale: [1, 1.6 + i * 0.3],
+          opacity: [0.4, 0],
+        }}
+        transition={{
+          duration: 1.8,
+          repeat: Infinity,
+          delay: i * 0.4,
+          ease: "easeOut",
+        }}
+      />
+    ))}
+  </div>
+);
+
 const ClariceChat = () => {
   const [open, setOpen] = useState(false);
   const [status, setStatus] = useState<string>("idle");
@@ -93,27 +114,43 @@ const ClariceChat = () => {
 
             {/* Voice area */}
             <div className="flex flex-col items-center justify-center py-10 px-6 gap-5">
-              {/* Animated mic button */}
-              <button
-                onClick={toggleConversation}
-                disabled={status === "connecting"}
-                className={`w-24 h-24 rounded-full flex items-center justify-center transition-all shadow-lg ${
-                  isConnected
-                    ? isSpeaking
-                      ? "bg-primary animate-pulse scale-110"
-                      : "bg-red-500 scale-105"
-                    : status === "connecting"
-                    ? "gradient-purple opacity-60"
-                    : "gradient-purple hover:opacity-90 hover:scale-105"
-                }`}
-                aria-label={isConnected ? "Stop conversation" : "Start conversation"}
-              >
-                {isConnected ? (
-                  <MicOff className="h-9 w-9 text-primary-foreground" />
-                ) : (
-                  <Mic className="h-9 w-9 text-primary-foreground" />
+              {/* Mic button with pulsing rings */}
+              <div className="relative flex items-center justify-center">
+                {isConnected && (
+                  <PulsingRings color={isSpeaking ? "bg-primary" : "bg-destructive"} />
                 )}
-              </button>
+
+                <motion.button
+                  onClick={toggleConversation}
+                  disabled={status === "connecting"}
+                  animate={
+                    isConnected
+                      ? { scale: isSpeaking ? [1, 1.08, 1] : 1 }
+                      : {}
+                  }
+                  transition={
+                    isSpeaking
+                      ? { duration: 0.8, repeat: Infinity, ease: "easeInOut" }
+                      : {}
+                  }
+                  className={`relative z-10 w-24 h-24 rounded-full flex items-center justify-center transition-colors shadow-lg ${
+                    isConnected
+                      ? isSpeaking
+                        ? "bg-primary"
+                        : "bg-destructive"
+                      : status === "connecting"
+                      ? "gradient-purple opacity-60"
+                      : "gradient-purple hover:opacity-90"
+                  }`}
+                  aria-label={isConnected ? "Stop conversation" : "Start conversation"}
+                >
+                  {isConnected ? (
+                    <MicOff className="h-9 w-9 text-primary-foreground" />
+                  ) : (
+                    <Mic className="h-9 w-9 text-primary-foreground" />
+                  )}
+                </motion.button>
+              </div>
 
               <p className="text-center text-sm text-muted-foreground font-body">
                 {status === "connecting"
