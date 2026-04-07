@@ -29,12 +29,12 @@ const About = () => (
       <div className="container mx-auto px-4">
         <div className="grid md:grid-cols-2 gap-16 items-center max-w-5xl mx-auto">
           <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }}>
-            <img src={instructorImg} alt="Clarice Wachegu — Clarity Violin instructor" loading="lazy" width={800} height={1024} className="rounded-3xl shadow-card w-full object-cover max-h-[500px]" />
+            <img src={instructorImg} alt="Clarice Orpah — Clarity Violin instructor" loading="lazy" width={800} height={1024} className="rounded-3xl shadow-card w-full object-cover max-h-[500px]" />
           </motion.div>
           <motion.div initial={{ opacity: 0, x: 30 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ duration: 0.6 }} className="space-y-6">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">Meet Clarice Wachegu</h2>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-foreground">Meet Clarice Orpah</h2>
             <p className="text-muted-foreground leading-relaxed font-body">
-              Clarity Violin was founded by Clarice Wachegu, a passionate violinist who has been playing since she was 12 years old. Now 18, Clarice brings youthful energy, dedication, and a deep love for music to every lesson.
+              Clarity Violin was founded by Clarice Orpah, a passionate violinist who has been playing since she was 12 years old. Now 18, Clarice brings youthful energy, dedication, and a deep love for music to every lesson.
             </p>
             <p className="text-muted-foreground leading-relaxed font-body">
               Based in Bondo, Siaya County, Kenya, Clarity Violin brings professional violin education to our community with warmth, patience, and excellence. Whether you're a child picking up a bow for the first time or an adult rediscovering your musical passion, we create a supportive space where you can grow at your own pace.
