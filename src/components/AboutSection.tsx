@@ -39,7 +39,7 @@ const AboutSection = () => (
         variants={fadeUp}
         className="mt-6 text-muted-foreground text-lg leading-relaxed font-body"
       >
-        At Clarity Violin, we believe music transforms lives. Founded by Clarice Wachegu, who has been playing since age 12,
+        At Clarity Violin, we believe music transforms lives. Founded by Clarice Orpah, who has been playing since age 12,
         our academy guides each student with patience, warmth, and a deep love for the violin.
         Whether you're picking up a bow for the first time or refining your repertoire, we create a supportive space
         where you can grow at your own pace.
