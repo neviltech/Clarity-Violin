@@ -3,7 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { MessageCircle, X, Mic, MicOff } from "lucide-react";
 import { useConversation } from "@elevenlabs/react";
 
-const AGENT_ID = "agent_2701knh1mh31e4bs8tmq598s9wrm";
+const AGENT_ID = "agent_3301knkw1mfvf829r1kp6pwqspsj";
 
 const PulsingRings = ({ color = "bg-primary" }: { color?: string }) => (
   <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
