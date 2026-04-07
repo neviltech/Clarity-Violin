@@ -54,9 +54,12 @@ const ClariceChat = () => {
 
     try {
       await navigator.mediaDevices.getUserMedia({ audio: true });
-      await conversation.startSession({
-        agentId: AGENT_ID,
-      });
+      await Promise.resolve(
+        conversation.startSession({
+          agentId: AGENT_ID,
+          connectionType: "websocket",
+        }),
+      );
     } catch (err) {
       console.error("Failed to start:", err);
       setIsConnecting(false);
