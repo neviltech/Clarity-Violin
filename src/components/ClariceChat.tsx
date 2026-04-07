@@ -20,46 +20,62 @@ const PulsingRings = ({ color = "bg-primary" }: { color?: string }) => (
 
 const ClariceChat = () => {
   const [open, setOpen] = useState(false);
+  const [isConnecting, setIsConnecting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   const conversation = useConversation({
+    onConnect: () => {
+      setIsConnecting(false);
+      setErrorMessage(null);
+    },
+    onDisconnect: () => {
+      setIsConnecting(false);
+    },
     onError: (error) => {
       console.error("Clarice error:", error);
+      setIsConnecting(false);
+      setErrorMessage("Unable to connect. Please try again.");
     },
   });
 
-  const status = conversation.status;
-  const isConnected = status === "connected";
-  const isConnecting = status === "connecting";
+  const isConnected = conversation.status === "connected";
   const isSpeaking = conversation.isSpeaking;
-  const errorMessage = status === "error"
-    ? conversation.message || "Unable to connect right now. Please try again."
-    : null;
 
   const toggleConversation = useCallback(async () => {
-    if (status === "connected" || status === "connecting") {
-      await Promise.resolve(conversation.endSession());
+    if (isConnected) {
+      await conversation.endSession();
       return;
     }
 
+    if (isConnecting) return;
+
+    setIsConnecting(true);
+    setErrorMessage(null);
+
     try {
       await navigator.mediaDevices.getUserMedia({ audio: true });
-      await Promise.resolve(
-        conversation.startSession({
-          agentId: AGENT_ID,
-          connectionType: "websocket",
-        }),
-      );
+      await conversation.startSession({
+        agentId: AGENT_ID,
+      });
     } catch (err) {
       console.error("Failed to start:", err);
+      setIsConnecting(false);
+      setErrorMessage(
+        err instanceof DOMException && err.name === "NotAllowedError"
+          ? "Microphone access is required to talk to Clarice."
+          : "Failed to connect. Please try again."
+      );
     }
-  }, [conversation, status]);
+  }, [conversation, isConnected, isConnecting]);
 
   const handleClose = useCallback(async () => {
-    if (status === "connected" || status === "connecting") {
-      await Promise.resolve(conversation.endSession());
+    if (isConnected) {
+      await conversation.endSession();
     }
+    setIsConnecting(false);
+    setErrorMessage(null);
     setOpen(false);
-  }, [conversation, status]);
+  }, [conversation, isConnected]);
 
   return (
     <>
